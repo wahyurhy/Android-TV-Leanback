@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.wahyurhy.androidtvleanback.model.DataModel
+import com.wahyurhy.androidtvleanback.model.Detail
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -41,14 +42,16 @@ class MainActivity : FragmentActivity() {
 
         listFragment.bindData(dataList)
 
-        updateBanner(dataList)
+        listFragment.setOnContentSelectedListener {
+            updateBanner(it)
+        }
     }
 
-    private fun updateBanner(dataList: DataModel) {
-        txtTitle.text = dataList.result[0].details[3].title
-        txtDescription.text = dataList.result[0].details[3].overview
+    private fun updateBanner(dataList: Detail) {
+        txtTitle.text = dataList.title
+        txtDescription.text = dataList.overview
 
-        val url = "https://www.themoviedb.org/t/p/w780" + dataList.result[0].details[3].backdropPath
+        val url = "https://www.themoviedb.org/t/p/w780" + dataList.backdropPath
         Glide.with(this)
             .load(url)
             .into(imgBanner)
