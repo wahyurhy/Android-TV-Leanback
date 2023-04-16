@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.AndroidTVLeanback" parent="@style/Theme.Leanback" />
+</resources>
