@@ -4,6 +4,6 @@
     <item android:drawable="@drawable/selected_menu" android:state_activated="true" />
     <item android:drawable="@drawable/selected_menu" android:state_focused="true" />
 
-    <item android:drawable="@color/transparent" />
+    <item android:drawable="@color/transparent" android:state_activated="false" />
 
 </selector>

@@ -13,7 +13,6 @@ import androidx.leanback.widget.BrowseFrameLayout
 import com.wahyurhy.androidtvleanback.fragment.*
 import com.wahyurhy.androidtvleanback.utils.Common
 import com.wahyurhy.androidtvleanback.utils.Constants
-import org.intellij.lang.annotations.Language
 
 class MainActivity : FragmentActivity(), View.OnKeyListener {
 
@@ -194,6 +193,6 @@ class MainActivity : FragmentActivity(), View.OnKeyListener {
 
     private fun navbarSize(size: Int) {
         navBar.requestLayout()
-        navBar.layoutParams.width = Common.getWidthPercent(this, size)
+        navBar.layoutParams.width = Common.getWidthInPercent(this, size)
     }
 }

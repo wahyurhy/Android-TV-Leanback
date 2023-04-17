@@ -1,4 +1,4 @@
-package com.wahyurhy.androidtvleanback.model.response
+package com.wahyurhy.androidtvleanback.model.response.detail
 
 
 import com.google.gson.annotations.SerializedName
